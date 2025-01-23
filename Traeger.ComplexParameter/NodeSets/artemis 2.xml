@@ -1,0 +1,2272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:s1="http://artemis.com/Artemis/Types.xsd" xmlns:ua="http://unifiedautomation.com/Configuration/NodeSet.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <NamespaceUris>
+        <Uri>http://artemis.com/Artemis/</Uri>
+    </NamespaceUris>
+    <Models>
+        <Model ModelUri="http://artemis.com/Artemis/" PublicationDate="2024-11-26T13:36:43Z" Version="1.0.0-rc26">
+            <RequiredModel ModelUri="http://opcfoundation.org/UA/" PublicationDate="2022-11-01T00:00:00Z" Version="1.05.02"/>
+        </Model>
+    </Models>
+    <Aliases>
+        <Alias Alias="Boolean">i=1</Alias>
+        <Alias Alias="UInt32">i=7</Alias>
+        <Alias Alias="String">i=12</Alias>
+        <Alias Alias="DateTime">i=13</Alias>
+        <Alias Alias="ByteString">i=15</Alias>
+        <Alias Alias="LocalizedText">i=21</Alias>
+        <Alias Alias="HasModellingRule">i=37</Alias>
+        <Alias Alias="HasEncoding">i=38</Alias>
+        <Alias Alias="HasDescription">i=39</Alias>
+        <Alias Alias="HasTypeDefinition">i=40</Alias>
+        <Alias Alias="HasSubtype">i=45</Alias>
+        <Alias Alias="HasProperty">i=46</Alias>
+        <Alias Alias="HasComponent">i=47</Alias>
+        <Alias Alias="IdType">i=256</Alias>
+        <Alias Alias="NumericRange">i=291</Alias>
+        <Alias Alias="Argument">i=296</Alias>
+        <Alias Alias="EnumValueType">i=7594</Alias>
+    </Aliases>
+    <Extensions>
+        <Extension>
+            <ua:ModelInfo Tool="UaModeler" Hash="dodQAn8osPdzznAwlYh/3A==" Version="1.6.9"/>
+        </Extension>
+    </Extensions>
+    <UADataType NodeId="ns=1;i=3003" BrowseName="1:ApplicationTypeEnum">
+        <DisplayName>ApplicationTypeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6004</Reference>
+        </References>
+        <Definition Name="1:ApplicationTypeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="SingleStrip" Value="2">
+                <Description Locale="en">The stripping of a single core wire.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3003" ValueRank="1" NodeId="ns=1;i=6004" ArrayDimensions="3" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3003</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>SingleStrip</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The stripping of a single core wire.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3031" BrowseName="1:ColorSelectionEnum">
+        <DisplayName>ColorSelectionEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6021</Reference>
+        </References>
+        <Definition Name="1:ColorSelectionEnum">
+            <Field Name="Transparent" Value="0"/>
+            <Field Name="Black" Value="1"/>
+            <Field Name="Blue" Value="2"/>
+            <Field Name="Brown" Value="3"/>
+            <Field Name="Gray" Value="4"/>
+            <Field Name="Green" Value="5"/>
+            <Field Name="Orange" Value="6"/>
+            <Field Name="Pink" Value="7"/>
+            <Field Name="Red" Value="8"/>
+            <Field Name="Turquoise" Value="9"/>
+            <Field Name="Violet" Value="10"/>
+            <Field Name="White" Value="11"/>
+            <Field Name="Yellow" Value="12"/>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="LocalizedText" ParentNodeId="ns=1;i=3031" ValueRank="1" NodeId="ns=1;i=6021" ArrayDimensions="13" BrowseName="EnumStrings">
+        <DisplayName>EnumStrings</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3031</Reference>
+        </References>
+        <Value>
+            <uax:ListOfLocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Transparent</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Black</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Blue</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Brown</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Gray</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Green</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Orange</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Pink</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Red</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Turquoise</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Violet</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>White</uax:Text>
+                </uax:LocalizedText>
+                <uax:LocalizedText>
+                    <uax:Text>Yellow</uax:Text>
+                </uax:LocalizedText>
+            </uax:ListOfLocalizedText>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3015" BrowseName="1:ConductorLayoutTypeEnum">
+        <DisplayName>ConductorLayoutTypeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6003</Reference>
+        </References>
+        <Definition Name="1:ConductorLayoutTypeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="SingleConductor" Value="2">
+                <Description Locale="en">The layout of the wire is spezified as a single conductor.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3015" ValueRank="1" NodeId="ns=1;i=6003" ArrayDimensions="3" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3015</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>SingleConductor</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The layout of the wire is spezified as a single conductor.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3018" BrowseName="1:ConductorMaterialSizeEnum">
+        <DisplayName>ConductorMaterialSizeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6025</Reference>
+        </References>
+        <Definition Name="1:ConductorMaterialSizeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="CrossSection" Value="2">
+                <Description Locale="en">The size of the conductor is specified as cross-section area.</Description>
+            </Field>
+            <Field Name="Awg" Value="3">
+                <Description Locale="en">The size of the conductor is specified as American Wire Gauge.</Description>
+            </Field>
+            <Field Name="Diameter" Value="4">
+                <Description Locale="en">The size of the conductor is specified as diameter.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3018" ValueRank="1" NodeId="ns=1;i=6025" ArrayDimensions="5" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3018</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>CrossSection</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The size of the conductor is specified as cross-section area.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>3</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Awg</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The size of the conductor is specified as American Wire Gauge.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>4</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Diameter</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The size of the conductor is specified as diameter.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3011" BrowseName="1:ConductorMaterialTypeEnum">
+        <DisplayName>ConductorMaterialTypeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6030</Reference>
+        </References>
+        <Definition Name="1:ConductorMaterialTypeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="Cu" Value="2">
+                <Description Locale="en">The material of the core is made of copper.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3011" ValueRank="1" NodeId="ns=1;i=6030" ArrayDimensions="3" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3011</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Cu</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The material of the core is made of copper.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3008" BrowseName="1:ConductorTypeEnum">
+        <DisplayName>ConductorTypeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6031</Reference>
+        </References>
+        <Definition Name="1:ConductorTypeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="Solid" Value="2">
+                <Description Locale="en">The core of the wire is made of one piece (wire is more stiff).</Description>
+            </Field>
+            <Field Name="Stranded" Value="3">
+                <Description Locale="en">The core of the wire is made of many smaller strands (wire is more flexible).</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3008" ValueRank="1" NodeId="ns=1;i=6031" ArrayDimensions="4" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3008</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Solid</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The core of the wire is made of one piece (wire is more stiff).</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>3</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Stranded</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The core of the wire is made of many smaller strands (wire is more flexible).</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3014" BrowseName="1:EquipmentModeEnum">
+        <DisplayName>EquipmentModeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6083</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:EquipmentModeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="InShutdown" Value="2">
+                <Description Locale="en">When the equipment is shutting down.</Description>
+            </Field>
+            <Field Name="Initial" Value="3">
+                <Description Locale="en">When the equipment has started up and waiting for further action.</Description>
+            </Field>
+            <Field Name="Setup" Value="4">
+                <Description Locale="en">When equipment is switched to setup mode.</Description>
+            </Field>
+            <Field Name="Manual" Value="5">
+                <Description Locale="en">When equipment is switched to manual mode.</Description>
+            </Field>
+            <Field Name="Automatic" Value="6">
+                <Description Locale="en">When equipment is switched to automatic mode.</Description>
+            </Field>
+            <Field Name="Maintenance" Value="7">
+                <Description Locale="en">When equipment is switched to maintenance mode.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3014" ValueRank="1" NodeId="ns=1;i=6083" ArrayDimensions="8" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3014</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>InShutdown</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When the equipment is shutting down.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>3</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Initial</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When the equipment has started up and waiting for further action.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>4</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Setup</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When equipment is switched to setup mode.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>5</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Manual</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When equipment is switched to manual mode.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>6</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Automatic</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When equipment is switched to automatic mode.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>7</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Maintenance</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When equipment is switched to maintenance mode.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3013" BrowseName="1:EquipmentStatusEnum">
+        <DisplayName>EquipmentStatusEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6092</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:EquipmentStatusEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="Offline" Value="2">
+                <Description Locale="en">Connection to the equipment is not established.</Description>
+            </Field>
+            <Field Name="Online" Value="3">
+                <Description Locale="en">Connection to the equipment is established.</Description>
+            </Field>
+            <Field Name="Ready" Value="4">
+                <Description Locale="en">Equipment is ready and waiting for further action.</Description>
+            </Field>
+            <Field Name="Running" Value="5">
+                <Description Locale="en">Equipment is currently running.</Description>
+            </Field>
+            <Field Name="Stopped" Value="6">
+                <Description Locale="en">Equipment is currently stopped.</Description>
+            </Field>
+            <Field Name="HasError" Value="7">
+                <Description Locale="en">Equipment is currently stopped and has an error.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3013" ValueRank="1" NodeId="ns=1;i=6092" ArrayDimensions="8" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3013</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Offline</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Connection to the equipment is not established.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>3</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Online</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Connection to the equipment is established.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>4</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Ready</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Equipment is ready and waiting for further action.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>5</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Running</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Equipment is currently running.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>6</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Stopped</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Equipment is currently stopped.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>7</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>HasError</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Equipment is currently stopped and has an error.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3012" BrowseName="1:JobStatusEnum">
+        <DisplayName>JobStatusEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6091</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:JobStatusEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="Added" Value="2">
+                <Description Locale="en">When a job was added.</Description>
+            </Field>
+            <Field Name="Activated" Value="3">
+                <Description Locale="en">When a job was activated. Means a job is allowed to start.</Description>
+            </Field>
+            <Field Name="InProgress" Value="4">
+                <Description Locale="en">When a job begins to produce items.</Description>
+            </Field>
+            <Field Name="Paused" Value="5">
+                <Description Locale="en">When a job is stopped before reaching its quantity. The job can be resumed later on.</Description>
+            </Field>
+            <Field Name="Completed" Value="6">
+                <Description Locale="en">When a job reached the job quantity.</Description>
+            </Field>
+            <Field Name="Finished" Value="7">
+                <Description Locale="en">When a job is confirmed to be completed. This status may be irreversible.</Description>
+            </Field>
+            <Field Name="Deleted" Value="8">
+                <Description Locale="en">When a job was deleted. This status must be irreversible.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3012" ValueRank="1" NodeId="ns=1;i=6091" ArrayDimensions="9" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3012</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Added</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When a job was added.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>3</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Activated</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When a job was activated. Means a job is allowed to start.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>4</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>InProgress</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When a job begins to produce items.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>5</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Paused</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When a job is stopped before reaching its quantity. The job can be resumed later on.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>6</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Completed</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When a job reached the job quantity.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>7</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Finished</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When a job is confirmed to be completed. This status may be irreversible.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>8</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Deleted</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When a job was deleted. This status must be irreversible.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3019" BrowseName="1:MarkingTypeEnum">
+        <DisplayName>MarkingTypeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6011</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:MarkingTypeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="InkJet" Value="2">
+                <Description Locale="en">When ink is used as the printing method.</Description>
+            </Field>
+            <Field Name="Laser" Value="3">
+                <Description Locale="en">When laser is used as the printing method.</Description>
+            </Field>
+            <Field Name="HotStamp" Value="4">
+                <Description Locale="en">When hot stamp is used as the printing method.</Description>
+            </Field>
+            <Field Name="LabelPrinter" Value="5">
+                <Description Locale="en">When a label is printed and sticked to the wire.</Description>
+            </Field>
+            <Field Name="ThermoTransfer" Value="6">
+                <Description Locale="en">When thermo transfer is used as the printing method.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3019" ValueRank="1" NodeId="ns=1;i=6011" ArrayDimensions="7" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3019</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>InkJet</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When ink is used as the printing method.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>3</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Laser</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When laser is used as the printing method.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>4</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>HotStamp</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When hot stamp is used as the printing method.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>5</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>LabelPrinter</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When a label is printed and sticked to the wire.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>6</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>ThermoTransfer</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>When thermo transfer is used as the printing method.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3007" BrowseName="1:ProcessTypeEnum">
+        <DisplayName>ProcessTypeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6016</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:ProcessTypeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="Mark" Value="2">
+                <Description Locale="en">Used when the equipment is capable of marking.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3007" ValueRank="1" NodeId="ns=1;i=6016" ArrayDimensions="3" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3007</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Mark</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when the equipment is capable of marking.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3006" BrowseName="1:StripApplicationTypeEnum">
+        <DisplayName>StripApplicationTypeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6017</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:StripApplicationTypeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="PartialStrip" Value="2">
+                <Description Locale="en">The application to process is a partial strip.</Description>
+            </Field>
+            <Field Name="FullStrip" Value="3">
+                <Description Locale="en">The application tp process is a full strip.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3006" ValueRank="1" NodeId="ns=1;i=6017" ArrayDimensions="4" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3006</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>PartialStrip</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The application to process is a partial strip.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>3</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>FullStrip</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The application tp process is a full strip.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3009" BrowseName="1:UnitScopeEnum">
+        <DisplayName>UnitScopeEnum</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6088</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+        </References>
+        <Definition Name="1:UnitScopeEnum">
+            <Field Name="Undefined" Value="0">
+                <Description Locale="en">Default value. Behavior depends on implementation.</Description>
+            </Field>
+            <Field Name="Custom" Value="1">
+                <Description Locale="en">Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</Description>
+            </Field>
+            <Field Name="Job" Value="2">
+                <Description Locale="en">The data used refers to the scope of a job.</Description>
+            </Field>
+            <Field Name="Batch" Value="3">
+                <Description Locale="en">The data used refers to the scope of a batch.</Description>
+            </Field>
+            <Field Name="Item" Value="4">
+                <Description Locale="en">The data used refers to the scope of an item (one single part).</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="EnumValueType" ParentNodeId="ns=1;i=3009" ValueRank="1" NodeId="ns=1;i=6088" ArrayDimensions="5" BrowseName="EnumValues">
+        <DisplayName>EnumValues</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=3009</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>0</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Undefined</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Default value. Behavior depends on implementation.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>1</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Custom</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>Used when no other value of the list is suitable. Behavior must be agreed upon by server and client.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>2</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Job</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The data used refers to the scope of a job.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>3</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Batch</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The data used refers to the scope of a batch.</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=7616</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:EnumValueType>
+                            <uax:Value>4</uax:Value>
+                            <uax:DisplayName>
+                                <uax:Text>Item</uax:Text>
+                            </uax:DisplayName>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The data used refers to the scope of an item (one single part).</uax:Text>
+                            </uax:Description>
+                        </uax:EnumValueType>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3028" BrowseName="1:JobEntryDataType">
+        <DisplayName>JobEntryDataType</DisplayName>
+        <Description Locale="en">Inital data of the job for other method calls.</Description>
+        <References>
+            <Reference ReferenceType="HasEncoding">ns=1;i=5014</Reference>
+            <Reference ReferenceType="HasEncoding">ns=1;i=5052</Reference>
+            <Reference ReferenceType="HasEncoding">ns=1;i=5044</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+        </References>
+        <Definition Name="1:JobEntryDataType">
+            <Field DataType="String" Name="JobIdentifier">
+                <Description>Uniquely identifies the job.</Description>
+            </Field>
+            <Field DataType="String" Name="JobName">
+                <Description>The name of the job.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6037" NodeId="ns=1;i=6015" BrowseName="1:JobEntryDataType">
+        <DisplayName>JobEntryDataType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=69</Reference>
+            <Reference ReferenceType="HasDescription" IsForward="false">ns=1;i=5014</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=6037</Reference>
+        </References>
+        <Value>
+            <uax:String>JobEntryDataType</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6039" NodeId="ns=1;i=6020" BrowseName="1:JobEntryDataType">
+        <DisplayName>JobEntryDataType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=69</Reference>
+            <Reference ReferenceType="HasDescription" IsForward="false">ns=1;i=5044</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=6039</Reference>
+        </References>
+        <Value>
+            <uax:String>//xs:element[@name='JobEntryDataType']</uax:String>
+        </Value>
+    </UAVariable>
+    <UADataType NodeId="ns=1;i=3029" BrowseName="1:NewJobDataType">
+        <DisplayName>NewJobDataType</DisplayName>
+        <Description Locale="en">Data for adding a new job.</Description>
+        <References>
+            <Reference ReferenceType="HasEncoding">ns=1;i=5056</Reference>
+            <Reference ReferenceType="HasEncoding">ns=1;i=5058</Reference>
+            <Reference ReferenceType="HasEncoding">ns=1;i=5057</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=3028</Reference>
+        </References>
+        <Definition Name="1:NewJobDataType">
+            <Field DataType="String" Name="ArticleIdentifier">
+                <Description>Uniquely identifies the article to be produced.</Description>
+            </Field>
+            <Field DataType="UInt32" Name="JobQuantity">
+                <Description>The target quantity of the job.</Description>
+            </Field>
+            <Field DataType="UInt32" Name="BatchQuantity">
+                <Description>The target quantity per batch.</Description>
+            </Field>
+        </Definition>
+    </UADataType>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6037" NodeId="ns=1;i=6059" BrowseName="1:NewJobDataType">
+        <DisplayName>NewJobDataType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=69</Reference>
+            <Reference ReferenceType="HasDescription" IsForward="false">ns=1;i=5056</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=6037</Reference>
+        </References>
+        <Value>
+            <uax:String>NewJobDataType</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6039" NodeId="ns=1;i=6060" BrowseName="1:NewJobDataType">
+        <DisplayName>NewJobDataType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=69</Reference>
+            <Reference ReferenceType="HasDescription" IsForward="false">ns=1;i=5057</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=6039</Reference>
+        </References>
+        <Value>
+            <uax:String>//xs:element[@name='NewJobDataType']</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable SymbolicName="TypeDictionary_BinarySchema" DataType="ByteString" NodeId="ns=1;i=6037" BrowseName="1:TypeDictionary">
+        <DisplayName>TypeDictionary</DisplayName>
+        <Description>Collects the data type descriptions of http://artemis.com/Artemis/</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6063</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6015</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6038</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6059</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">i=93</Reference>
+        </References>
+        <Value>
+            <uax:ByteString>PG9wYzpUeXBlRGljdGlvbmFyeSB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZ
+        W1hLWluc3RhbmNlIiB4bWxuczp0bnM9Imh0dHA6Ly9zY2hsZXVuaWdlci5jb20vQXJ0ZW1pc
+        y8iIERlZmF1bHRCeXRlT3JkZXI9IkxpdHRsZUVuZGlhbiIgeG1sbnM6b3BjPSJodHRwOi8vb
+        3BjZm91bmRhdGlvbi5vcmcvQmluYXJ5U2NoZW1hLyIgeG1sbnM6dWE9Imh0dHA6Ly9vcGNmb
+        3VuZGF0aW9uLm9yZy9VQS8iIFRhcmdldE5hbWVzcGFjZT0iaHR0cDovL3NjaGxldW5pZ2VyL
+        mNvbS9BcnRlbWlzLyI+CiA8b3BjOkltcG9ydCBOYW1lc3BhY2U9Imh0dHA6Ly9vcGNmb3VuZ
+        GF0aW9uLm9yZy9VQS8iLz4KIDxvcGM6U3RydWN0dXJlZFR5cGUgQmFzZVR5cGU9InVhOkV4d
+        GVuc2lvbk9iamVjdCIgTmFtZT0iSm9iRW50cnlEYXRhVHlwZSI+CiAgPG9wYzpEb2N1bWVud
+        GF0aW9uPkluaXRhbCBkYXRhIG9mIHRoZSBqb2IgZm9yIG90aGVyIG1ldGhvZCBjYWxscy48L
+        29wYzpEb2N1bWVudGF0aW9uPgogIDxvcGM6RmllbGQgVHlwZU5hbWU9Im9wYzpDaGFyQXJyY
+        XkiIE5hbWU9IkpvYklkZW50aWZpZXIiLz4KICA8b3BjOkZpZWxkIFR5cGVOYW1lPSJvcGM6Q
+        2hhckFycmF5IiBOYW1lPSJKb2JOYW1lIi8+CiA8L29wYzpTdHJ1Y3R1cmVkVHlwZT4KIDxvc
+        GM6U3RydWN0dXJlZFR5cGUgQmFzZVR5cGU9InRuczpKb2JFbnRyeURhdGFUeXBlIiBOYW1lP
+        SJOZXdKb2JEYXRhVHlwZSI+CiAgPG9wYzpEb2N1bWVudGF0aW9uPkRhdGEgZm9yIGFkZGluZ
+        yBhIG5ldyBqb2IuPC9vcGM6RG9jdW1lbnRhdGlvbj4KICA8b3BjOkZpZWxkIFNvdXJjZVR5c
+        GU9InRuczpKb2JFbnRyeURhdGFUeXBlIiBUeXBlTmFtZT0ib3BjOkNoYXJBcnJheSIgTmFtZ
+        T0iSm9iSWRlbnRpZmllciIvPgogIDxvcGM6RmllbGQgU291cmNlVHlwZT0idG5zOkpvYkVud
+        HJ5RGF0YVR5cGUiIFR5cGVOYW1lPSJvcGM6Q2hhckFycmF5IiBOYW1lPSJKb2JOYW1lIi8+C
+        iAgPG9wYzpGaWVsZCBUeXBlTmFtZT0ib3BjOkNoYXJBcnJheSIgTmFtZT0iQXJ0aWNsZUlkZ
+        W50aWZpZXIiLz4KICA8b3BjOkZpZWxkIFR5cGVOYW1lPSJvcGM6VUludDMyIiBOYW1lPSJKb
+        2JRdWFudGl0eSIvPgogIDxvcGM6RmllbGQgVHlwZU5hbWU9Im9wYzpVSW50MzIiIE5hbWU9I
+        kJhdGNoUXVhbnRpdHkiLz4KIDwvb3BjOlN0cnVjdHVyZWRUeXBlPgogPG9wYzpFbnVtZXJhd
+        GVkVHlwZSBMZW5ndGhJbkJpdHM9IjMyIiBOYW1lPSJBcHBsaWNhdGlvblR5cGVFbnVtIj4KI
+        CA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJVbmRlZmluZWQiIFZhbHVlPSIwIi8+CiAgP
+        G9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iQ3VzdG9tIiBWYWx1ZT0iMSIvPgogIDxvcGM6R
+        W51bWVyYXRlZFZhbHVlIE5hbWU9IlNpbmdsZVN0cmlwIiBWYWx1ZT0iMiIvPgogPC9vcGM6R
+        W51bWVyYXRlZFR5cGU+CiA8b3BjOkVudW1lcmF0ZWRUeXBlIExlbmd0aEluQml0cz0iMzIiI
+        E5hbWU9IkNvbG9yU2VsZWN0aW9uRW51bSI+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZ
+        T0iVHJhbnNwYXJlbnQiIFZhbHVlPSIwIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZ
+        T0iQmxhY2siIFZhbHVlPSIxIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iQmx1Z
+        SIgVmFsdWU9IjIiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJCcm93biIgVmFsd
+        WU9IjMiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJHcmF5IiBWYWx1ZT0iNCIvP
+        gogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IkdyZWVuIiBWYWx1ZT0iNSIvPgogIDxvc
+        GM6RW51bWVyYXRlZFZhbHVlIE5hbWU9Ik9yYW5nZSIgVmFsdWU9IjYiLz4KICA8b3BjOkVud
+        W1lcmF0ZWRWYWx1ZSBOYW1lPSJQaW5rIiBWYWx1ZT0iNyIvPgogIDxvcGM6RW51bWVyYXRlZ
+        FZhbHVlIE5hbWU9IlJlZCIgVmFsdWU9IjgiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOY
+        W1lPSJUdXJxdW9pc2UiIFZhbHVlPSI5Ii8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZ
+        T0iVmlvbGV0IiBWYWx1ZT0iMTAiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJXa
+        Gl0ZSIgVmFsdWU9IjExIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iWWVsbG93I
+        iBWYWx1ZT0iMTIiLz4KIDwvb3BjOkVudW1lcmF0ZWRUeXBlPgogPG9wYzpFbnVtZXJhdGVkV
+        HlwZSBMZW5ndGhJbkJpdHM9IjMyIiBOYW1lPSJDb25kdWN0b3JMYXlvdXRUeXBlRW51bSI+C
+        iAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iVW5kZWZpbmVkIiBWYWx1ZT0iMCIvPgogI
+        DxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IkN1c3RvbSIgVmFsdWU9IjEiLz4KICA8b3BjO
+        kVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJTaW5nbGVDb25kdWN0b3IiIFZhbHVlPSIyIi8+CiA8L
+        29wYzpFbnVtZXJhdGVkVHlwZT4KIDxvcGM6RW51bWVyYXRlZFR5cGUgTGVuZ3RoSW5CaXRzP
+        SIzMiIgTmFtZT0iQ29uZHVjdG9yTWF0ZXJpYWxTaXplRW51bSI+CiAgPG9wYzpFbnVtZXJhd
+        GVkVmFsdWUgTmFtZT0iVW5kZWZpbmVkIiBWYWx1ZT0iMCIvPgogIDxvcGM6RW51bWVyYXRlZ
+        FZhbHVlIE5hbWU9IkN1c3RvbSIgVmFsdWU9IjEiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1Z
+        SBOYW1lPSJDcm9zc1NlY3Rpb24iIFZhbHVlPSIyIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsd
+        WUgTmFtZT0iQXdnIiBWYWx1ZT0iMyIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9I
+        kRpYW1ldGVyIiBWYWx1ZT0iNCIvPgogPC9vcGM6RW51bWVyYXRlZFR5cGU+CiA8b3BjOkVud
+        W1lcmF0ZWRUeXBlIExlbmd0aEluQml0cz0iMzIiIE5hbWU9IkNvbmR1Y3Rvck1hdGVyaWFsV
+        HlwZUVudW0iPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IlVuZGVmaW5lZCIgVmFsd
+        WU9IjAiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJDdXN0b20iIFZhbHVlPSIxI
+        i8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iQ3UiIFZhbHVlPSIyIi8+CiA8L29wY
+        zpFbnVtZXJhdGVkVHlwZT4KIDxvcGM6RW51bWVyYXRlZFR5cGUgTGVuZ3RoSW5CaXRzPSIzM
+        iIgTmFtZT0iQ29uZHVjdG9yVHlwZUVudW0iPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hb
+        WU9IlVuZGVmaW5lZCIgVmFsdWU9IjAiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lP
+        SJDdXN0b20iIFZhbHVlPSIxIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iU29sa
+        WQiIFZhbHVlPSIyIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iU3RyYW5kZWQiI
+        FZhbHVlPSIzIi8+CiA8L29wYzpFbnVtZXJhdGVkVHlwZT4KIDxvcGM6RW51bWVyYXRlZFR5c
+        GUgTGVuZ3RoSW5CaXRzPSIzMiIgTmFtZT0iRXF1aXBtZW50TW9kZUVudW0iPgogIDxvcGM6R
+        W51bWVyYXRlZFZhbHVlIE5hbWU9IlVuZGVmaW5lZCIgVmFsdWU9IjAiLz4KICA8b3BjOkVud
+        W1lcmF0ZWRWYWx1ZSBOYW1lPSJDdXN0b20iIFZhbHVlPSIxIi8+CiAgPG9wYzpFbnVtZXJhd
+        GVkVmFsdWUgTmFtZT0iSW5TaHV0ZG93biIgVmFsdWU9IjIiLz4KICA8b3BjOkVudW1lcmF0Z
+        WRWYWx1ZSBOYW1lPSJJbml0aWFsIiBWYWx1ZT0iMyIvPgogIDxvcGM6RW51bWVyYXRlZFZhb
+        HVlIE5hbWU9IlNldHVwIiBWYWx1ZT0iNCIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hb
+        WU9Ik1hbnVhbCIgVmFsdWU9IjUiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJBd
+        XRvbWF0aWMiIFZhbHVlPSI2Ii8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iTWFpb
+        nRlbmFuY2UiIFZhbHVlPSI3Ii8+CiA8L29wYzpFbnVtZXJhdGVkVHlwZT4KIDxvcGM6RW51b
+        WVyYXRlZFR5cGUgTGVuZ3RoSW5CaXRzPSIzMiIgTmFtZT0iRXF1aXBtZW50U3RhdHVzRW51b
+        SI+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iVW5kZWZpbmVkIiBWYWx1ZT0iMCIvP
+        gogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IkN1c3RvbSIgVmFsdWU9IjEiLz4KICA8b
+        3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJPZmZsaW5lIiBWYWx1ZT0iMiIvPgogIDxvcGM6R
+        W51bWVyYXRlZFZhbHVlIE5hbWU9Ik9ubGluZSIgVmFsdWU9IjMiLz4KICA8b3BjOkVudW1lc
+        mF0ZWRWYWx1ZSBOYW1lPSJSZWFkeSIgVmFsdWU9IjQiLz4KICA8b3BjOkVudW1lcmF0ZWRWY
+        Wx1ZSBOYW1lPSJSdW5uaW5nIiBWYWx1ZT0iNSIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlI
+        E5hbWU9IlN0b3BwZWQiIFZhbHVlPSI2Ii8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZ
+        T0iSGFzRXJyb3IiIFZhbHVlPSI3Ii8+CiA8L29wYzpFbnVtZXJhdGVkVHlwZT4KIDxvcGM6R
+        W51bWVyYXRlZFR5cGUgTGVuZ3RoSW5CaXRzPSIzMiIgTmFtZT0iSm9iU3RhdHVzRW51bSI+C
+        iAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iVW5kZWZpbmVkIiBWYWx1ZT0iMCIvPgogI
+        DxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IkN1c3RvbSIgVmFsdWU9IjEiLz4KICA8b3BjO
+        kVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJBZGRlZCIgVmFsdWU9IjIiLz4KICA8b3BjOkVudW1lc
+        mF0ZWRWYWx1ZSBOYW1lPSJBY3RpdmF0ZWQiIFZhbHVlPSIzIi8+CiAgPG9wYzpFbnVtZXJhd
+        GVkVmFsdWUgTmFtZT0iSW5Qcm9ncmVzcyIgVmFsdWU9IjQiLz4KICA8b3BjOkVudW1lcmF0Z
+        WRWYWx1ZSBOYW1lPSJQYXVzZWQiIFZhbHVlPSI1Ii8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsd
+        WUgTmFtZT0iQ29tcGxldGVkIiBWYWx1ZT0iNiIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlI
+        E5hbWU9IkZpbmlzaGVkIiBWYWx1ZT0iNyIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hb
+        WU9IkRlbGV0ZWQiIFZhbHVlPSI4Ii8+CiA8L29wYzpFbnVtZXJhdGVkVHlwZT4KIDxvcGM6R
+        W51bWVyYXRlZFR5cGUgTGVuZ3RoSW5CaXRzPSIzMiIgTmFtZT0iTWFya2luZ1R5cGVFbnVtI
+        j4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJVbmRlZmluZWQiIFZhbHVlPSIwIi8+C
+        iAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iQ3VzdG9tIiBWYWx1ZT0iMSIvPgogIDxvc
+        GM6RW51bWVyYXRlZFZhbHVlIE5hbWU9Iklua0pldCIgVmFsdWU9IjIiLz4KICA8b3BjOkVud
+        W1lcmF0ZWRWYWx1ZSBOYW1lPSJMYXNlciIgVmFsdWU9IjMiLz4KICA8b3BjOkVudW1lcmF0Z
+        WRWYWx1ZSBOYW1lPSJIb3RTdGFtcCIgVmFsdWU9IjQiLz4KICA8b3BjOkVudW1lcmF0ZWRWY
+        Wx1ZSBOYW1lPSJMYWJlbFByaW50ZXIiIFZhbHVlPSI1Ii8+CiAgPG9wYzpFbnVtZXJhdGVkV
+        mFsdWUgTmFtZT0iVGhlcm1vVHJhbnNmZXIiIFZhbHVlPSI2Ii8+CiA8L29wYzpFbnVtZXJhd
+        GVkVHlwZT4KIDxvcGM6RW51bWVyYXRlZFR5cGUgTGVuZ3RoSW5CaXRzPSIzMiIgTmFtZT0iU
+        HJvY2Vzc1R5cGVFbnVtIj4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJVbmRlZmluZ
+        WQiIFZhbHVlPSIwIi8+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iQ3VzdG9tIiBWY
+        Wx1ZT0iMSIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9Ik1hcmsiIFZhbHVlPSIyI
+        i8+CiA8L29wYzpFbnVtZXJhdGVkVHlwZT4KIDxvcGM6RW51bWVyYXRlZFR5cGUgTGVuZ3RoS
+        W5CaXRzPSIzMiIgTmFtZT0iU3RyaXBBcHBsaWNhdGlvblR5cGVFbnVtIj4KICA8b3BjOkVud
+        W1lcmF0ZWRWYWx1ZSBOYW1lPSJVbmRlZmluZWQiIFZhbHVlPSIwIi8+CiAgPG9wYzpFbnVtZ
+        XJhdGVkVmFsdWUgTmFtZT0iQ3VzdG9tIiBWYWx1ZT0iMSIvPgogIDxvcGM6RW51bWVyYXRlZ
+        FZhbHVlIE5hbWU9IlBhcnRpYWxTdHJpcCIgVmFsdWU9IjIiLz4KICA8b3BjOkVudW1lcmF0Z
+        WRWYWx1ZSBOYW1lPSJGdWxsU3RyaXAiIFZhbHVlPSIzIi8+CiA8L29wYzpFbnVtZXJhdGVkV
+        HlwZT4KIDxvcGM6RW51bWVyYXRlZFR5cGUgTGVuZ3RoSW5CaXRzPSIzMiIgTmFtZT0iVW5pd
+        FNjb3BlRW51bSI+CiAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iVW5kZWZpbmVkIiBWY
+        Wx1ZT0iMCIvPgogIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9IkN1c3RvbSIgVmFsdWU9I
+        jEiLz4KICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJKb2IiIFZhbHVlPSIyIi8+CiAgP
+        G9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0iQmF0Y2giIFZhbHVlPSIzIi8+CiAgPG9wYzpFb
+        nVtZXJhdGVkVmFsdWUgTmFtZT0iSXRlbSIgVmFsdWU9IjQiLz4KIDwvb3BjOkVudW1lcmF0Z
+        WRUeXBlPgo8L29wYzpUeXBlRGljdGlvbmFyeT4K</uax:ByteString>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=6037" NodeId="ns=1;i=6063" BrowseName="Deprecated">
+        <DisplayName>Deprecated</DisplayName>
+        <Description>Indicates that all of the DataType definitions represented by the DataTypeDictionaryType are available through a DataTypeDefinition Attribute.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6037</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>true</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6037" NodeId="ns=1;i=6038" BrowseName="NamespaceUri">
+        <DisplayName>NamespaceUri</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6037</Reference>
+        </References>
+        <Value>
+            <uax:String>http://artemis.com/Artemis/</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable SymbolicName="TypeDictionary_XmlSchema" DataType="ByteString" NodeId="ns=1;i=6039" BrowseName="1:TypeDictionary">
+        <DisplayName>TypeDictionary</DisplayName>
+        <Description>Collects the data type descriptions of http://artemis.com/Artemis/</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6065</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6020</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6040</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6060</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">i=92</Reference>
+        </References>
+        <Value>
+            <uax:ByteString>PHhzOnNjaGVtYSBlbGVtZW50Rm9ybURlZmF1bHQ9InF1YWxpZmllZCIgdGFyZ2V0TmFtZXNwYWNlPSJod
+        HRwOi8vc2NobGV1bmlnZXIuY29tL0FydGVtaXMvVHlwZXMueHNkIiB4bWxuczp0bnM9Imh0d
+        HA6Ly9zY2hsZXVuaWdlci5jb20vQXJ0ZW1pcy9UeXBlcy54c2QiIHhtbG5zOnVhPSJodHRwO
+        i8vb3BjZm91bmRhdGlvbi5vcmcvVUEvMjAwOC8wMi9UeXBlcy54c2QiIHhtbG5zOnhzPSJod
+        HRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSI+CiA8eHM6aW1wb3J0IG5hbWVzcGFjZ
+        T0iaHR0cDovL29wY2ZvdW5kYXRpb24ub3JnL1VBLzIwMDgvMDIvVHlwZXMueHNkIi8+CiA8e
+        HM6c2ltcGxlVHlwZSBuYW1lPSJBcHBsaWNhdGlvblR5cGVFbnVtIj4KICA8eHM6cmVzdHJpY
+        3Rpb24gYmFzZT0ieHM6c3RyaW5nIj4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJVbmRlZ
+        mluZWRfMCIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkN1c3RvbV8xIi8+CiAgIDx4c
+        zplbnVtZXJhdGlvbiB2YWx1ZT0iU2luZ2xlU3RyaXBfMiIvPgogIDwveHM6cmVzdHJpY3Rpb
+        24+CiA8L3hzOnNpbXBsZVR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6QXBwbGljYXRpb
+        25UeXBlRW51bSIgbmFtZT0iQXBwbGljYXRpb25UeXBlRW51bSIvPgogPHhzOmNvbXBsZXhUe
+        XBlIG5hbWU9Ikxpc3RPZkFwcGxpY2F0aW9uVHlwZUVudW0iPgogIDx4czpzZXF1ZW5jZT4KI
+        CAgPHhzOmVsZW1lbnQgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgdHlwZ
+        T0idG5zOkFwcGxpY2F0aW9uVHlwZUVudW0iIG5hbWU9IkFwcGxpY2F0aW9uVHlwZUVudW0iI
+        G5pbGxhYmxlPSJ0cnVlIi8+CiAgPC94czpzZXF1ZW5jZT4KIDwveHM6Y29tcGxleFR5cGU+C
+        iA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6TGlzdE9mQXBwbGljYXRpb25UeXBlRW51bSIgbmFtZ
+        T0iTGlzdE9mQXBwbGljYXRpb25UeXBlRW51bSIgbmlsbGFibGU9InRydWUiLz4KIDx4czpza
+        W1wbGVUeXBlIG5hbWU9IkNvbG9yU2VsZWN0aW9uRW51bSI+CiAgPHhzOnJlc3RyaWN0aW9uI
+        GJhc2U9InhzOnN0cmluZyI+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iVHJhbnNwYXJlb
+        nRfMCIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkJsYWNrXzEiLz4KICAgPHhzOmVud
+        W1lcmF0aW9uIHZhbHVlPSJCbHVlXzIiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJCc
+        m93bl8zIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iR3JheV80Ii8+CiAgIDx4czplb
+        nVtZXJhdGlvbiB2YWx1ZT0iR3JlZW5fNSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9I
+        k9yYW5nZV82Ii8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iUGlua183Ii8+CiAgIDx4c
+        zplbnVtZXJhdGlvbiB2YWx1ZT0iUmVkXzgiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlP
+        SJUdXJxdW9pc2VfOSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IlZpb2xldF8xMCIvP
+        gogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IldoaXRlXzExIi8+CiAgIDx4czplbnVtZXJhd
+        GlvbiB2YWx1ZT0iWWVsbG93XzEyIi8+CiAgPC94czpyZXN0cmljdGlvbj4KIDwveHM6c2ltc
+        GxlVHlwZT4KIDx4czplbGVtZW50IHR5cGU9InRuczpDb2xvclNlbGVjdGlvbkVudW0iIG5hb
+        WU9IkNvbG9yU2VsZWN0aW9uRW51bSIvPgogPHhzOmNvbXBsZXhUeXBlIG5hbWU9Ikxpc3RPZ
+        kNvbG9yU2VsZWN0aW9uRW51bSI+CiAgPHhzOnNlcXVlbmNlPgogICA8eHM6ZWxlbWVudCBta
+        W5PY2N1cnM9IjAiIG1heE9jY3Vycz0idW5ib3VuZGVkIiB0eXBlPSJ0bnM6Q29sb3JTZWxlY
+        3Rpb25FbnVtIiBuYW1lPSJDb2xvclNlbGVjdGlvbkVudW0iIG5pbGxhYmxlPSJ0cnVlIi8+C
+        iAgPC94czpzZXF1ZW5jZT4KIDwveHM6Y29tcGxleFR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlP
+        SJ0bnM6TGlzdE9mQ29sb3JTZWxlY3Rpb25FbnVtIiBuYW1lPSJMaXN0T2ZDb2xvclNlbGVjd
+        GlvbkVudW0iIG5pbGxhYmxlPSJ0cnVlIi8+CiA8eHM6c2ltcGxlVHlwZSBuYW1lPSJDb25kd
+        WN0b3JMYXlvdXRUeXBlRW51bSI+CiAgPHhzOnJlc3RyaWN0aW9uIGJhc2U9InhzOnN0cmluZ
+        yI+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iVW5kZWZpbmVkXzAiLz4KICAgPHhzOmVud
+        W1lcmF0aW9uIHZhbHVlPSJDdXN0b21fMSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9I
+        lNpbmdsZUNvbmR1Y3Rvcl8yIi8+CiAgPC94czpyZXN0cmljdGlvbj4KIDwveHM6c2ltcGxlV
+        HlwZT4KIDx4czplbGVtZW50IHR5cGU9InRuczpDb25kdWN0b3JMYXlvdXRUeXBlRW51bSIgb
+        mFtZT0iQ29uZHVjdG9yTGF5b3V0VHlwZUVudW0iLz4KIDx4czpjb21wbGV4VHlwZSBuYW1lP
+        SJMaXN0T2ZDb25kdWN0b3JMYXlvdXRUeXBlRW51bSI+CiAgPHhzOnNlcXVlbmNlPgogICA8e
+        HM6ZWxlbWVudCBtaW5PY2N1cnM9IjAiIG1heE9jY3Vycz0idW5ib3VuZGVkIiB0eXBlPSJ0b
+        nM6Q29uZHVjdG9yTGF5b3V0VHlwZUVudW0iIG5hbWU9IkNvbmR1Y3RvckxheW91dFR5cGVFb
+        nVtIiBuaWxsYWJsZT0idHJ1ZSIvPgogIDwveHM6c2VxdWVuY2U+CiA8L3hzOmNvbXBsZXhUe
+        XBlPgogPHhzOmVsZW1lbnQgdHlwZT0idG5zOkxpc3RPZkNvbmR1Y3RvckxheW91dFR5cGVFb
+        nVtIiBuYW1lPSJMaXN0T2ZDb25kdWN0b3JMYXlvdXRUeXBlRW51bSIgbmlsbGFibGU9InRyd
+        WUiLz4KIDx4czpzaW1wbGVUeXBlIG5hbWU9IkNvbmR1Y3Rvck1hdGVyaWFsU2l6ZUVudW0iP
+        gogIDx4czpyZXN0cmljdGlvbiBiYXNlPSJ4czpzdHJpbmciPgogICA8eHM6ZW51bWVyYXRpb
+        24gdmFsdWU9IlVuZGVmaW5lZF8wIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iQ3Vzd
+        G9tXzEiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJDcm9zc1NlY3Rpb25fMiIvPgogI
+        CA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkF3Z18zIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2Y
+        Wx1ZT0iRGlhbWV0ZXJfNCIvPgogIDwveHM6cmVzdHJpY3Rpb24+CiA8L3hzOnNpbXBsZVR5c
+        GU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6Q29uZHVjdG9yTWF0ZXJpYWxTaXplRW51bSIgb
+        mFtZT0iQ29uZHVjdG9yTWF0ZXJpYWxTaXplRW51bSIvPgogPHhzOmNvbXBsZXhUeXBlIG5hb
+        WU9Ikxpc3RPZkNvbmR1Y3Rvck1hdGVyaWFsU2l6ZUVudW0iPgogIDx4czpzZXF1ZW5jZT4KI
+        CAgPHhzOmVsZW1lbnQgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgdHlwZ
+        T0idG5zOkNvbmR1Y3Rvck1hdGVyaWFsU2l6ZUVudW0iIG5hbWU9IkNvbmR1Y3Rvck1hdGVya
+        WFsU2l6ZUVudW0iIG5pbGxhYmxlPSJ0cnVlIi8+CiAgPC94czpzZXF1ZW5jZT4KIDwveHM6Y
+        29tcGxleFR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6TGlzdE9mQ29uZHVjdG9yTWF0Z
+        XJpYWxTaXplRW51bSIgbmFtZT0iTGlzdE9mQ29uZHVjdG9yTWF0ZXJpYWxTaXplRW51bSIgb
+        mlsbGFibGU9InRydWUiLz4KIDx4czpzaW1wbGVUeXBlIG5hbWU9IkNvbmR1Y3Rvck1hdGVya
+        WFsVHlwZUVudW0iPgogIDx4czpyZXN0cmljdGlvbiBiYXNlPSJ4czpzdHJpbmciPgogICA8e
+        HM6ZW51bWVyYXRpb24gdmFsdWU9IlVuZGVmaW5lZF8wIi8+CiAgIDx4czplbnVtZXJhdGlvb
+        iB2YWx1ZT0iQ3VzdG9tXzEiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJDdV8yIi8+C
+        iAgPC94czpyZXN0cmljdGlvbj4KIDwveHM6c2ltcGxlVHlwZT4KIDx4czplbGVtZW50IHR5c
+        GU9InRuczpDb25kdWN0b3JNYXRlcmlhbFR5cGVFbnVtIiBuYW1lPSJDb25kdWN0b3JNYXRlc
+        mlhbFR5cGVFbnVtIi8+CiA8eHM6Y29tcGxleFR5cGUgbmFtZT0iTGlzdE9mQ29uZHVjdG9yT
+        WF0ZXJpYWxUeXBlRW51bSI+CiAgPHhzOnNlcXVlbmNlPgogICA8eHM6ZWxlbWVudCBtaW5PY
+        2N1cnM9IjAiIG1heE9jY3Vycz0idW5ib3VuZGVkIiB0eXBlPSJ0bnM6Q29uZHVjdG9yTWF0Z
+        XJpYWxUeXBlRW51bSIgbmFtZT0iQ29uZHVjdG9yTWF0ZXJpYWxUeXBlRW51bSIgbmlsbGFib
+        GU9InRydWUiLz4KICA8L3hzOnNlcXVlbmNlPgogPC94czpjb21wbGV4VHlwZT4KIDx4czplb
+        GVtZW50IHR5cGU9InRuczpMaXN0T2ZDb25kdWN0b3JNYXRlcmlhbFR5cGVFbnVtIiBuYW1lP
+        SJMaXN0T2ZDb25kdWN0b3JNYXRlcmlhbFR5cGVFbnVtIiBuaWxsYWJsZT0idHJ1ZSIvPgogP
+        HhzOnNpbXBsZVR5cGUgbmFtZT0iQ29uZHVjdG9yVHlwZUVudW0iPgogIDx4czpyZXN0cmljd
+        GlvbiBiYXNlPSJ4czpzdHJpbmciPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IlVuZGVma
+        W5lZF8wIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iQ3VzdG9tXzEiLz4KICAgPHhzO
+        mVudW1lcmF0aW9uIHZhbHVlPSJTb2xpZF8yIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1Z
+        T0iU3RyYW5kZWRfMyIvPgogIDwveHM6cmVzdHJpY3Rpb24+CiA8L3hzOnNpbXBsZVR5cGU+C
+        iA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6Q29uZHVjdG9yVHlwZUVudW0iIG5hbWU9IkNvbmR1Y
+        3RvclR5cGVFbnVtIi8+CiA8eHM6Y29tcGxleFR5cGUgbmFtZT0iTGlzdE9mQ29uZHVjdG9yV
+        HlwZUVudW0iPgogIDx4czpzZXF1ZW5jZT4KICAgPHhzOmVsZW1lbnQgbWluT2NjdXJzPSIwI
+        iBtYXhPY2N1cnM9InVuYm91bmRlZCIgdHlwZT0idG5zOkNvbmR1Y3RvclR5cGVFbnVtIiBuY
+        W1lPSJDb25kdWN0b3JUeXBlRW51bSIgbmlsbGFibGU9InRydWUiLz4KICA8L3hzOnNlcXVlb
+        mNlPgogPC94czpjb21wbGV4VHlwZT4KIDx4czplbGVtZW50IHR5cGU9InRuczpMaXN0T2ZDb
+        25kdWN0b3JUeXBlRW51bSIgbmFtZT0iTGlzdE9mQ29uZHVjdG9yVHlwZUVudW0iIG5pbGxhY
+        mxlPSJ0cnVlIi8+CiA8eHM6c2ltcGxlVHlwZSBuYW1lPSJFcXVpcG1lbnRNb2RlRW51bSI+C
+        iAgPHhzOnJlc3RyaWN0aW9uIGJhc2U9InhzOnN0cmluZyI+CiAgIDx4czplbnVtZXJhdGlvb
+        iB2YWx1ZT0iVW5kZWZpbmVkXzAiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJDdXN0b
+        21fMSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkluU2h1dGRvd25fMiIvPgogICA8e
+        HM6ZW51bWVyYXRpb24gdmFsdWU9IkluaXRpYWxfMyIvPgogICA8eHM6ZW51bWVyYXRpb24gd
+        mFsdWU9IlNldHVwXzQiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJNYW51YWxfNSIvP
+        gogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkF1dG9tYXRpY182Ii8+CiAgIDx4czplbnVtZ
+        XJhdGlvbiB2YWx1ZT0iTWFpbnRlbmFuY2VfNyIvPgogIDwveHM6cmVzdHJpY3Rpb24+CiA8L
+        3hzOnNpbXBsZVR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6RXF1aXBtZW50TW9kZUVud
+        W0iIG5hbWU9IkVxdWlwbWVudE1vZGVFbnVtIi8+CiA8eHM6Y29tcGxleFR5cGUgbmFtZT0iT
+        GlzdE9mRXF1aXBtZW50TW9kZUVudW0iPgogIDx4czpzZXF1ZW5jZT4KICAgPHhzOmVsZW1lb
+        nQgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgdHlwZT0idG5zOkVxdWlwb
+        WVudE1vZGVFbnVtIiBuYW1lPSJFcXVpcG1lbnRNb2RlRW51bSIgbmlsbGFibGU9InRydWUiL
+        z4KICA8L3hzOnNlcXVlbmNlPgogPC94czpjb21wbGV4VHlwZT4KIDx4czplbGVtZW50IHR5c
+        GU9InRuczpMaXN0T2ZFcXVpcG1lbnRNb2RlRW51bSIgbmFtZT0iTGlzdE9mRXF1aXBtZW50T
+        W9kZUVudW0iIG5pbGxhYmxlPSJ0cnVlIi8+CiA8eHM6c2ltcGxlVHlwZSBuYW1lPSJFcXVpc
+        G1lbnRTdGF0dXNFbnVtIj4KICA8eHM6cmVzdHJpY3Rpb24gYmFzZT0ieHM6c3RyaW5nIj4KI
+        CAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJVbmRlZmluZWRfMCIvPgogICA8eHM6ZW51bWVyY
+        XRpb24gdmFsdWU9IkN1c3RvbV8xIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iT2Zmb
+        GluZV8yIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iT25saW5lXzMiLz4KICAgPHhzO
+        mVudW1lcmF0aW9uIHZhbHVlPSJSZWFkeV80Ii8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1Z
+        T0iUnVubmluZ181Ii8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iU3RvcHBlZF82Ii8+C
+        iAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iSGFzRXJyb3JfNyIvPgogIDwveHM6cmVzdHJpY
+        3Rpb24+CiA8L3hzOnNpbXBsZVR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6RXF1aXBtZ
+        W50U3RhdHVzRW51bSIgbmFtZT0iRXF1aXBtZW50U3RhdHVzRW51bSIvPgogPHhzOmNvbXBsZ
+        XhUeXBlIG5hbWU9Ikxpc3RPZkVxdWlwbWVudFN0YXR1c0VudW0iPgogIDx4czpzZXF1ZW5jZ
+        T4KICAgPHhzOmVsZW1lbnQgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgd
+        HlwZT0idG5zOkVxdWlwbWVudFN0YXR1c0VudW0iIG5hbWU9IkVxdWlwbWVudFN0YXR1c0Vud
+        W0iIG5pbGxhYmxlPSJ0cnVlIi8+CiAgPC94czpzZXF1ZW5jZT4KIDwveHM6Y29tcGxleFR5c
+        GU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6TGlzdE9mRXF1aXBtZW50U3RhdHVzRW51bSIgb
+        mFtZT0iTGlzdE9mRXF1aXBtZW50U3RhdHVzRW51bSIgbmlsbGFibGU9InRydWUiLz4KIDx4c
+        zpzaW1wbGVUeXBlIG5hbWU9IkpvYlN0YXR1c0VudW0iPgogIDx4czpyZXN0cmljdGlvbiBiY
+        XNlPSJ4czpzdHJpbmciPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IlVuZGVmaW5lZF8wI
+        i8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iQ3VzdG9tXzEiLz4KICAgPHhzOmVudW1lc
+        mF0aW9uIHZhbHVlPSJBZGRlZF8yIi8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iQWN0a
+        XZhdGVkXzMiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJJblByb2dyZXNzXzQiLz4KI
+        CAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJQYXVzZWRfNSIvPgogICA8eHM6ZW51bWVyYXRpb
+        24gdmFsdWU9IkNvbXBsZXRlZF82Ii8+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iRmlua
+        XNoZWRfNyIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkRlbGV0ZWRfOCIvPgogIDwve
+        HM6cmVzdHJpY3Rpb24+CiA8L3hzOnNpbXBsZVR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0b
+        nM6Sm9iU3RhdHVzRW51bSIgbmFtZT0iSm9iU3RhdHVzRW51bSIvPgogPHhzOmNvbXBsZXhUe
+        XBlIG5hbWU9Ikxpc3RPZkpvYlN0YXR1c0VudW0iPgogIDx4czpzZXF1ZW5jZT4KICAgPHhzO
+        mVsZW1lbnQgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgdHlwZT0idG5zO
+        kpvYlN0YXR1c0VudW0iIG5hbWU9IkpvYlN0YXR1c0VudW0iIG5pbGxhYmxlPSJ0cnVlIi8+C
+        iAgPC94czpzZXF1ZW5jZT4KIDwveHM6Y29tcGxleFR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlP
+        SJ0bnM6TGlzdE9mSm9iU3RhdHVzRW51bSIgbmFtZT0iTGlzdE9mSm9iU3RhdHVzRW51bSIgb
+        mlsbGFibGU9InRydWUiLz4KIDx4czpzaW1wbGVUeXBlIG5hbWU9Ik1hcmtpbmdUeXBlRW51b
+        SI+CiAgPHhzOnJlc3RyaWN0aW9uIGJhc2U9InhzOnN0cmluZyI+CiAgIDx4czplbnVtZXJhd
+        GlvbiB2YWx1ZT0iVW5kZWZpbmVkXzAiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJDd
+        XN0b21fMSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9Iklua0pldF8yIi8+CiAgIDx4c
+        zplbnVtZXJhdGlvbiB2YWx1ZT0iTGFzZXJfMyIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsd
+        WU9IkhvdFN0YW1wXzQiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJMYWJlbFByaW50Z
+        XJfNSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IlRoZXJtb1RyYW5zZmVyXzYiLz4KI
+        CA8L3hzOnJlc3RyaWN0aW9uPgogPC94czpzaW1wbGVUeXBlPgogPHhzOmVsZW1lbnQgdHlwZ
+        T0idG5zOk1hcmtpbmdUeXBlRW51bSIgbmFtZT0iTWFya2luZ1R5cGVFbnVtIi8+CiA8eHM6Y
+        29tcGxleFR5cGUgbmFtZT0iTGlzdE9mTWFya2luZ1R5cGVFbnVtIj4KICA8eHM6c2VxdWVuY
+        2U+CiAgIDx4czplbGVtZW50IG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1bmJvdW5kZWQiI
+        HR5cGU9InRuczpNYXJraW5nVHlwZUVudW0iIG5hbWU9Ik1hcmtpbmdUeXBlRW51bSIgbmlsb
+        GFibGU9InRydWUiLz4KICA8L3hzOnNlcXVlbmNlPgogPC94czpjb21wbGV4VHlwZT4KIDx4c
+        zplbGVtZW50IHR5cGU9InRuczpMaXN0T2ZNYXJraW5nVHlwZUVudW0iIG5hbWU9Ikxpc3RPZ
+        k1hcmtpbmdUeXBlRW51bSIgbmlsbGFibGU9InRydWUiLz4KIDx4czpzaW1wbGVUeXBlIG5hb
+        WU9IlByb2Nlc3NUeXBlRW51bSI+CiAgPHhzOnJlc3RyaWN0aW9uIGJhc2U9InhzOnN0cmluZ
+        yI+CiAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iVW5kZWZpbmVkXzAiLz4KICAgPHhzOmVud
+        W1lcmF0aW9uIHZhbHVlPSJDdXN0b21fMSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9I
+        k1hcmtfMiIvPgogIDwveHM6cmVzdHJpY3Rpb24+CiA8L3hzOnNpbXBsZVR5cGU+CiA8eHM6Z
+        WxlbWVudCB0eXBlPSJ0bnM6UHJvY2Vzc1R5cGVFbnVtIiBuYW1lPSJQcm9jZXNzVHlwZUVud
+        W0iLz4KIDx4czpjb21wbGV4VHlwZSBuYW1lPSJMaXN0T2ZQcm9jZXNzVHlwZUVudW0iPgogI
+        Dx4czpzZXF1ZW5jZT4KICAgPHhzOmVsZW1lbnQgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9I
+        nVuYm91bmRlZCIgdHlwZT0idG5zOlByb2Nlc3NUeXBlRW51bSIgbmFtZT0iUHJvY2Vzc1R5c
+        GVFbnVtIiBuaWxsYWJsZT0idHJ1ZSIvPgogIDwveHM6c2VxdWVuY2U+CiA8L3hzOmNvbXBsZ
+        XhUeXBlPgogPHhzOmVsZW1lbnQgdHlwZT0idG5zOkxpc3RPZlByb2Nlc3NUeXBlRW51bSIgb
+        mFtZT0iTGlzdE9mUHJvY2Vzc1R5cGVFbnVtIiBuaWxsYWJsZT0idHJ1ZSIvPgogPHhzOnNpb
+        XBsZVR5cGUgbmFtZT0iU3RyaXBBcHBsaWNhdGlvblR5cGVFbnVtIj4KICA8eHM6cmVzdHJpY
+        3Rpb24gYmFzZT0ieHM6c3RyaW5nIj4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJVbmRlZ
+        mluZWRfMCIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkN1c3RvbV8xIi8+CiAgIDx4c
+        zplbnVtZXJhdGlvbiB2YWx1ZT0iUGFydGlhbFN0cmlwXzIiLz4KICAgPHhzOmVudW1lcmF0a
+        W9uIHZhbHVlPSJGdWxsU3RyaXBfMyIvPgogIDwveHM6cmVzdHJpY3Rpb24+CiA8L3hzOnNpb
+        XBsZVR5cGU+CiA8eHM6ZWxlbWVudCB0eXBlPSJ0bnM6U3RyaXBBcHBsaWNhdGlvblR5cGVFb
+        nVtIiBuYW1lPSJTdHJpcEFwcGxpY2F0aW9uVHlwZUVudW0iLz4KIDx4czpjb21wbGV4VHlwZ
+        SBuYW1lPSJMaXN0T2ZTdHJpcEFwcGxpY2F0aW9uVHlwZUVudW0iPgogIDx4czpzZXF1ZW5jZ
+        T4KICAgPHhzOmVsZW1lbnQgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgd
+        HlwZT0idG5zOlN0cmlwQXBwbGljYXRpb25UeXBlRW51bSIgbmFtZT0iU3RyaXBBcHBsaWNhd
+        GlvblR5cGVFbnVtIiBuaWxsYWJsZT0idHJ1ZSIvPgogIDwveHM6c2VxdWVuY2U+CiA8L3hzO
+        mNvbXBsZXhUeXBlPgogPHhzOmVsZW1lbnQgdHlwZT0idG5zOkxpc3RPZlN0cmlwQXBwbGljY
+        XRpb25UeXBlRW51bSIgbmFtZT0iTGlzdE9mU3RyaXBBcHBsaWNhdGlvblR5cGVFbnVtIiBua
+        WxsYWJsZT0idHJ1ZSIvPgogPHhzOnNpbXBsZVR5cGUgbmFtZT0iVW5pdFNjb3BlRW51bSI+C
+        iAgPHhzOnJlc3RyaWN0aW9uIGJhc2U9InhzOnN0cmluZyI+CiAgIDx4czplbnVtZXJhdGlvb
+        iB2YWx1ZT0iVW5kZWZpbmVkXzAiLz4KICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJDdXN0b
+        21fMSIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9IkpvYl8yIi8+CiAgIDx4czplbnVtZ
+        XJhdGlvbiB2YWx1ZT0iQmF0Y2hfMyIvPgogICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9Ikl0Z
+        W1fNCIvPgogIDwveHM6cmVzdHJpY3Rpb24+CiA8L3hzOnNpbXBsZVR5cGU+CiA8eHM6ZWxlb
+        WVudCB0eXBlPSJ0bnM6VW5pdFNjb3BlRW51bSIgbmFtZT0iVW5pdFNjb3BlRW51bSIvPgogP
+        HhzOmNvbXBsZXhUeXBlIG5hbWU9Ikxpc3RPZlVuaXRTY29wZUVudW0iPgogIDx4czpzZXF1Z
+        W5jZT4KICAgPHhzOmVsZW1lbnQgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZ
+        CIgdHlwZT0idG5zOlVuaXRTY29wZUVudW0iIG5hbWU9IlVuaXRTY29wZUVudW0iIG5pbGxhY
+        mxlPSJ0cnVlIi8+CiAgPC94czpzZXF1ZW5jZT4KIDwveHM6Y29tcGxleFR5cGU+CiA8eHM6Z
+        WxlbWVudCB0eXBlPSJ0bnM6TGlzdE9mVW5pdFNjb3BlRW51bSIgbmFtZT0iTGlzdE9mVW5pd
+        FNjb3BlRW51bSIgbmlsbGFibGU9InRydWUiLz4KIDx4czpjb21wbGV4VHlwZSBuYW1lPSJKb
+        2JFbnRyeURhdGFUeXBlIj4KICA8eHM6YW5ub3RhdGlvbj4KICAgPHhzOmRvY3VtZW50YXRpb
+        24+SW5pdGFsIGRhdGEgb2YgdGhlIGpvYiBmb3Igb3RoZXIgbWV0aG9kIGNhbGxzLjwveHM6Z
+        G9jdW1lbnRhdGlvbj4KICA8L3hzOmFubm90YXRpb24+CiAgPHhzOnNlcXVlbmNlPgogICA8e
+        HM6ZWxlbWVudCBtaW5PY2N1cnM9IjAiIG1heE9jY3Vycz0iMSIgdHlwZT0ieHM6c3RyaW5nI
+        iBuYW1lPSJKb2JJZGVudGlmaWVyIi8+CiAgIDx4czplbGVtZW50IG1pbk9jY3Vycz0iMCIgb
+        WF4T2NjdXJzPSIxIiB0eXBlPSJ4czpzdHJpbmciIG5hbWU9IkpvYk5hbWUiLz4KICA8L3hzO
+        nNlcXVlbmNlPgogPC94czpjb21wbGV4VHlwZT4KIDx4czplbGVtZW50IHR5cGU9InRuczpKb
+        2JFbnRyeURhdGFUeXBlIiBuYW1lPSJKb2JFbnRyeURhdGFUeXBlIi8+CiA8eHM6Y29tcGxle
+        FR5cGUgbmFtZT0iTGlzdE9mSm9iRW50cnlEYXRhVHlwZSI+CiAgPHhzOnNlcXVlbmNlPgogI
+        CA8eHM6ZWxlbWVudCBtaW5PY2N1cnM9IjAiIG1heE9jY3Vycz0idW5ib3VuZGVkIiB0eXBlP
+        SJ0bnM6Sm9iRW50cnlEYXRhVHlwZSIgbmFtZT0iSm9iRW50cnlEYXRhVHlwZSIgbmlsbGFib
+        GU9InRydWUiLz4KICA8L3hzOnNlcXVlbmNlPgogPC94czpjb21wbGV4VHlwZT4KIDx4czplb
+        GVtZW50IHR5cGU9InRuczpMaXN0T2ZKb2JFbnRyeURhdGFUeXBlIiBuYW1lPSJMaXN0T2ZKb
+        2JFbnRyeURhdGFUeXBlIiBuaWxsYWJsZT0idHJ1ZSIvPgogPHhzOmNvbXBsZXhUeXBlIG5hb
+        WU9Ik5ld0pvYkRhdGFUeXBlIj4KICA8eHM6YW5ub3RhdGlvbj4KICAgPHhzOmRvY3VtZW50Y
+        XRpb24+RGF0YSBmb3IgYWRkaW5nIGEgbmV3IGpvYi48L3hzOmRvY3VtZW50YXRpb24+CiAgP
+        C94czphbm5vdGF0aW9uPgogIDx4czpjb21wbGV4Q29udGVudCBtaXhlZD0iZmFsc2UiPgogI
+        CA8eHM6ZXh0ZW5zaW9uIGJhc2U9InRuczpKb2JFbnRyeURhdGFUeXBlIj4KICAgIDx4czpzZ
+        XF1ZW5jZT4KICAgICA8eHM6ZWxlbWVudCBtaW5PY2N1cnM9IjAiIG1heE9jY3Vycz0iMSIgd
+        HlwZT0ieHM6c3RyaW5nIiBuYW1lPSJBcnRpY2xlSWRlbnRpZmllciIvPgogICAgIDx4czplb
+        GVtZW50IG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSIxIiB0eXBlPSJ4czp1bnNpZ25lZElud
+        CIgbmFtZT0iSm9iUXVhbnRpdHkiLz4KICAgICA8eHM6ZWxlbWVudCBtaW5PY2N1cnM9IjAiI
+        G1heE9jY3Vycz0iMSIgdHlwZT0ieHM6dW5zaWduZWRJbnQiIG5hbWU9IkJhdGNoUXVhbnRpd
+        HkiLz4KICAgIDwveHM6c2VxdWVuY2U+CiAgIDwveHM6ZXh0ZW5zaW9uPgogIDwveHM6Y29tc
+        GxleENvbnRlbnQ+CiA8L3hzOmNvbXBsZXhUeXBlPgogPHhzOmVsZW1lbnQgdHlwZT0idG5zO
+        k5ld0pvYkRhdGFUeXBlIiBuYW1lPSJOZXdKb2JEYXRhVHlwZSIvPgogPHhzOmNvbXBsZXhUe
+        XBlIG5hbWU9Ikxpc3RPZk5ld0pvYkRhdGFUeXBlIj4KICA8eHM6c2VxdWVuY2U+CiAgIDx4c
+        zplbGVtZW50IG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1bmJvdW5kZWQiIHR5cGU9InRuc
+        zpOZXdKb2JEYXRhVHlwZSIgbmFtZT0iTmV3Sm9iRGF0YVR5cGUiIG5pbGxhYmxlPSJ0cnVlI
+        i8+CiAgPC94czpzZXF1ZW5jZT4KIDwveHM6Y29tcGxleFR5cGU+CiA8eHM6ZWxlbWVudCB0e
+        XBlPSJ0bnM6TGlzdE9mTmV3Sm9iRGF0YVR5cGUiIG5hbWU9Ikxpc3RPZk5ld0pvYkRhdGFUe
+        XBlIiBuaWxsYWJsZT0idHJ1ZSIvPgo8L3hzOnNjaGVtYT4K</uax:ByteString>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=6039" NodeId="ns=1;i=6065" BrowseName="Deprecated">
+        <DisplayName>Deprecated</DisplayName>
+        <Description>Indicates that all of the DataType definitions represented by the DataTypeDictionaryType are available through a DataTypeDefinition Attribute.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6039</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>true</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=6039" NodeId="ns=1;i=6040" BrowseName="NamespaceUri">
+        <DisplayName>NamespaceUri</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6039</Reference>
+        </References>
+        <Value>
+            <uax:String>http://artemis.com/Artemis/Types.xsd</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObjectType NodeId="ns=1;i=1022" BrowseName="1:JobListType">
+        <DisplayName>JobListType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=7001</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+        </References>
+    </UAObjectType>
+    <UAMethod ParentNodeId="ns=1;i=1022" NodeId="ns=1;i=7001" BrowseName="1:AddJob">
+        <DisplayName>AddJob</DisplayName>
+        <Description Locale="en">Adds a job to the job list.</Description>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1022</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6001</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6002</Reference>
+        </References>
+    </UAMethod>
+    <UAVariable DataType="Argument" ParentNodeId="ns=1;i=7001" ValueRank="1" NodeId="ns=1;i=6001" ArrayDimensions="1" BrowseName="InputArguments">
+        <DisplayName>InputArguments</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7001</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=297</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:Argument>
+                            <uax:Name>JobData</uax:Name>
+                            <uax:DataType>
+                                <uax:Identifier>ns=1;i=3029</uax:Identifier>
+                            </uax:DataType>
+                            <uax:ValueRank>-1</uax:ValueRank>
+                            <uax:ArrayDimensions/>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>The data for the new job.</uax:Text>
+                            </uax:Description>
+                        </uax:Argument>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Argument" ParentNodeId="ns=1;i=7001" ValueRank="1" NodeId="ns=1;i=6002" ArrayDimensions="1" BrowseName="OutputArguments">
+        <DisplayName>OutputArguments</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7001</Reference>
+        </References>
+        <Value>
+            <uax:ListOfExtensionObject>
+                <uax:ExtensionObject>
+                    <uax:TypeId>
+                        <uax:Identifier>i=297</uax:Identifier>
+                    </uax:TypeId>
+                    <uax:Body>
+                        <uax:Argument>
+                            <uax:Name>Status</uax:Name>
+                            <uax:DataType>
+                                <uax:Identifier>i=7</uax:Identifier>
+                            </uax:DataType>
+                            <uax:ValueRank>-1</uax:ValueRank>
+                            <uax:ArrayDimensions/>
+                            <uax:Description>
+                                <uax:Locale>en</uax:Locale>
+                                <uax:Text>App-specific method status.</uax:Text>
+                            </uax:Description>
+                        </uax:Argument>
+                    </uax:Body>
+                </uax:ExtensionObject>
+            </uax:ListOfExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAObject SymbolicName="http___artemis_com_Artemis_" NodeId="ns=1;i=5079" BrowseName="1:http://artemis.com/Artemis/">
+        <DisplayName>http://artemis.com/Artemis/</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=11616</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6156</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6157</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6158</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6162</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6163</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6164</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6165</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">i=11715</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5079" NodeId="ns=1;i=6156" BrowseName="IsNamespaceSubset">
+        <DisplayName>IsNamespaceSubset</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5079</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="DateTime" ParentNodeId="ns=1;i=5079" NodeId="ns=1;i=6157" BrowseName="NamespacePublicationDate">
+        <DisplayName>NamespacePublicationDate</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5079</Reference>
+        </References>
+        <Value>
+            <uax:DateTime>2024-11-26T13:36:43Z</uax:DateTime>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5079" NodeId="ns=1;i=6158" BrowseName="NamespaceUri">
+        <DisplayName>NamespaceUri</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5079</Reference>
+        </References>
+        <Value>
+            <uax:String>http://artemis.com/Artemis/</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5079" NodeId="ns=1;i=6162" BrowseName="NamespaceVersion">
+        <DisplayName>NamespaceVersion</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5079</Reference>
+        </References>
+        <Value>
+            <uax:String>1.0.0-rc26</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="IdType" ParentNodeId="ns=1;i=5079" ValueRank="1" NodeId="ns=1;i=6163" ArrayDimensions="0" BrowseName="StaticNodeIdTypes">
+        <DisplayName>StaticNodeIdTypes</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5079</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="NumericRange" ParentNodeId="ns=1;i=5079" ValueRank="1" NodeId="ns=1;i=6164" ArrayDimensions="0" BrowseName="StaticNumericNodeIdRange">
+        <DisplayName>StaticNumericNodeIdRange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5079</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5079" NodeId="ns=1;i=6165" BrowseName="StaticStringNodeIdPattern">
+        <DisplayName>StaticStringNodeIdPattern</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5079</Reference>
+        </References>
+    </UAVariable>
+    <UAObject SymbolicName="DefaultBinary" NodeId="ns=1;i=5014" BrowseName="Default Binary">
+        <DisplayName>Default Binary</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+            <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=3028</Reference>
+            <Reference ReferenceType="HasDescription">ns=1;i=6015</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="DefaultXml" NodeId="ns=1;i=5044" BrowseName="Default XML">
+        <DisplayName>Default XML</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+            <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=3028</Reference>
+            <Reference ReferenceType="HasDescription">ns=1;i=6020</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="DefaultJson" NodeId="ns=1;i=5052" BrowseName="Default JSON">
+        <DisplayName>Default JSON</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+            <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=3028</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="DefaultBinary" NodeId="ns=1;i=5056" BrowseName="Default Binary">
+        <DisplayName>Default Binary</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+            <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=3029</Reference>
+            <Reference ReferenceType="HasDescription">ns=1;i=6059</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="DefaultXml" NodeId="ns=1;i=5057" BrowseName="Default XML">
+        <DisplayName>Default XML</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+            <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=3029</Reference>
+            <Reference ReferenceType="HasDescription">ns=1;i=6060</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="DefaultJson" NodeId="ns=1;i=5058" BrowseName="Default JSON">
+        <DisplayName>Default JSON</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+            <Reference ReferenceType="HasEncoding" IsForward="false">ns=1;i=3029</Reference>
+        </References>
+    </UAObject>
+</UANodeSet>

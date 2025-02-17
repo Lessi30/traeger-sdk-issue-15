@@ -1,15 +1,17 @@
 ﻿using Opc.UaFx;
 using Opc.UaFx.Server;
-using Traeger.ComplexParameter.TraegerTypes;
-namespace Traeger.ComplexParameter
+using Traeger.ComplexParameter.Fail.TraegerTypes;
+
+namespace Traeger.ComplexParameter.Fail
 {
     public class ArtemisNodeManager() : OpcNodeManager("http://artemis.com/Artemis/")
     {
         protected override IEnumerable<OpcNodeSet> ImportNodes()
         {
+            //this.NodeSetImportOptions = OpcNodeSetImportOptions.CompleteDataTypeDefinitionFields;
             this.NodeSetImportOptions = OpcNodeSetImportOptions.CompleteDataTypeDefinitionFields | OpcNodeSetImportOptions.CompleteDataTypeDefinitionDefaultEncoding;
 
-            return[];
+            return[OpcNodeSet.Load(@".\NodeSets\artemis 2.xml")];
         }
         protected override IEnumerable<IOpcNode> CreateNodes(OpcNodeReferenceCollection references)
         {

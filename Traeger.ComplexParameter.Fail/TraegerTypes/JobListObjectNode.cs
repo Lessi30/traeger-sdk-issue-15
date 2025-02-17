@@ -1,7 +1,7 @@
 ﻿using Opc.Ua;
 using Opc.UaFx;
 
-namespace Traeger.ComplexParameter.TraegerTypes
+namespace Traeger.ComplexParameter.Fail.TraegerTypes
 {
     internal sealed class JobListObjectNode : OpcObjectNode
     {
@@ -12,12 +12,6 @@ namespace Traeger.ComplexParameter.TraegerTypes
         public JobListObjectNode(IOpcNode parent, OpcName name, OpcNodeId id, OpcContext context)
             : base(parent, name, id)
         {
-            //AddJobNode = new OpcMethodNode(
-            //    parent: this,
-            //    name: "AddJob",
-            //    id: "ns=2;i=7013",
-            //    callback: new Func<NewJobData, uint>(AddJob)); 
-            
             AddJobNode = new OpcMethodNode(
                 parent: this,
                 name: "AddJob",

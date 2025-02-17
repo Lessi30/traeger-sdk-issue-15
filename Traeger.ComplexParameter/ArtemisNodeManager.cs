@@ -8,7 +8,9 @@ namespace Traeger.ComplexParameter
         // Works correct when the nodeset is not imported
         protected override IEnumerable<OpcNodeSet> ImportNodes()
         {
-            yield return OpcNodeSet.Load(@".\NodeSets\artemis 2.xml");
+            this.NodeSetImportOptions = OpcNodeSetImportOptions.CompleteDataTypeDefinitionFields | OpcNodeSetImportOptions.CompleteDataTypeDefinitionDefaultEncoding;
+
+            return[OpcNodeSet.Load(@".\NodeSets\artemis 2.xml")];
         }
         protected override IEnumerable<IOpcNode> CreateNodes(OpcNodeReferenceCollection references)
         {
